@@ -3,20 +3,7 @@
 		"repoName": "Ibrahim Iphone",
 		"repoIcon": "https://www.ibrahem.tk/icon.png"
 	},
-	"Tweaked": [
-	{
-		"name": "VideoStar",
-		"version": "8.3.2",
-		"icon": "https://usescarlet.com/icons/videostar.png",
-		"down": "https://resources.usescarlet.com/repo/IPAs/videostar.ipa",
-		"category": "Tweaked Apps",
- "debs": [
-			"https://usescarlet.com/debs/videostar.dylib"
-		],
-		"bundleID": "com.frontierdesign.videostar",
-		"appstore": "com.frontierdesign.videostar"
-	}
-	,{
+	"Tweaked": [{
 		"name": "YouTube",
 		"version": "17.26.2",
 		"down": "https://github.com/qnblackcat/uYouPlus/releases/download/v17.26.2-2.1/uYouPlus_17.26.2_2.1.ipa",
@@ -25,34 +12,26 @@
 		"bundleID": "com.google.ios.youtube",
 		"appstore": "com.google.ios.youtube",
 		"contact": {
-			"web": "https://www.ibrahem.tk/",
-			"telegram": "https://t.me/ibrahimiphone"
+			"web": "https://repo.twickd.com",
+			"twitter": "https://twitter.com/twickdrepo"
 		}
 	}, {
 		"name": "iPogo",
 		"version": "0.243.1",
 		"down": "https://ipogo.app/download/ipogo-2.6.1.ipa",
 		"category": "Tweaked Apps",
-		"description": "Hacked By Ibrahim Iphone",
+		"description": "With iPogo you get a full set of tools to help you be the best. iPogo is a Simple, Powerful and Intuitive App.",
 		"bundleID": "com.nianticlabs.pokemongo",
 		"appstore": "com.nianticlabs.pokemongo"
-		"contact": {
-			"web": "https://www.ibrahem.tk/",
-			"telegram": "https://t.me/ibrahimiphone"
-		}
 	}, {
 		"name": "SpooferX",
 		"version": "0.243.1",
 		"down": "https://www.spooferx.app/ipa/SpooferPro-0.243.1-0.88.ipa",
 		"category": "Tweaked Apps",
 		"changelog": "- Added Support for Latest version\n- Fixed Scarlet install error",
-		"description": "Hacked By Ibrahim Iphone",
+		"description": "SpooferX for Pokémon GO is an enhanced edition of the Pokémon GO app, adding a joystick and with free teleport ! It also include a lot of others features : IV checking, enhanced throw, auto walking and GPX, fast catch trick, a live feed and even a map with everything around you !",
 		"bundleID": "com.nianticlabs.pokemongo",
 		"appstore": "com.nianticlabs.pokemongo"
-		"contact": {
-			"web": "https://www.ibrahem.tk/",
-			"telegram": "https://t.me/ibrahimiphone"
-		}
 	}, {
 		"name": "Sposify++",
 		"version": "8.6.42",
@@ -62,10 +41,6 @@
 		"description": "Sposify and Spotilife tweak merged into one app",
 		"bundleID": "com.spotify.client",
 		"appstore": "com.spotify.client",
-		"contact": {
-			"web": "https://www.ibrahem.tk/",
-			"telegram": "https://t.me/ibrahimiphone"
-		}
 		"debs": [
 			"https://usescarlet.com/debs/Spotilife.dylib",
 			"https://usescarlet.com/debs/Sposify.dylib",
@@ -80,10 +55,6 @@
 		"category": "Tweaked Apps",
 		"bundleID": "com.rhino.InstagramApp",
 		"appstore": "com.burbn.instagram"
-		"contact": {
-			"web": "https://www.ibrahem.tk/",
-			"telegram": "https://t.me/ibrahimiphone"
-		}
 	}, {
 		"name": "VideoStar",
 		"version": "8.3.2",
@@ -95,10 +66,6 @@
 		],
 		"bundleID": "com.frontierdesign.videostar",
 		"appstore": "com.frontierdesign.videostar"
-		"contact": {
-			"web": "https://www.ibrahem.tk/",
-			"telegram": "https://t.me/ibrahimiphone"
-		}
 	}],
 	"Jailbreaks": [{
 			"name": "Taurine",
@@ -113,10 +80,9 @@
 				"https://taurine.app/assets/images/iphones.png",
 				"https://taurine.app/assets/images/iphone.png"
 			],
-			
 			"contact": [
-			"web": "https://www.ibrahem.tk/",
-			"telegram": "https://t.me/ibrahimiphone"
+				"https://taurine.app/",
+				"https://twitter.com/OdysseyTeam_"
 			]
 		},
 		{
@@ -133,8 +99,8 @@
 				"https://theodyssey.dev/assets/images/iphone.png"
 			],
 			"contact": [
-			"web": "https://www.ibrahem.tk/",
-			"telegram": "https://t.me/ibrahimiphone"
+				"https://theodyssey.dev/",
+				"https://twitter.com/OdysseyTeam_"
 			]
 		},
 		{
@@ -152,8 +118,8 @@
 				"https://resources.usescarlet.com/Screenshots/unc0verpg3.png"
 			],
 			"contact": [
-			"web": "https://www.ibrahem.tk/",
-			"telegram": "https://t.me/ibrahimiphone"
+				"https://unc0ver.dev/",
+				"https://twitter.com/pwn20wnd"
 			]
 		}
 	],
@@ -164,10 +130,6 @@
 		"appstore": "com.miniclip.agar.io",
 		"bundleID": "com.miniclip.agar.io",
 		"category": "Hacked Games"
-		"contact": {
-			"web": "https://www.ibrahem.tk/",
-			"telegram": "https://t.me/ibrahimiphone"
-		}
 	}],
 	"Emulators": [{
 		"name": "iNDS",
@@ -177,10 +139,6 @@
 		"category": "Emulators",
 		"description": "",
 		"bundleID": "net.nerd.iNDS"
-		"contact": {
-			"web": "https://www.ibrahem.tk/",
-			"telegram": "https://t.me/ibrahimiphone"
-		}
 	}, {
 		"name": "Delta iPac",
 		"version": "1",
@@ -189,9 +147,5 @@
 		"category": "Emulators",
 		"description": "A Fan-build of Delta, an all-in-one classic video game emulator for non-jailbroken iOS devices",
 		"bundleID": "com.ianclawson.DeltaPacEdition"
-		"contact": {
-			"web": "https://www.ibrahem.tk/",
-			"telegram": "https://t.me/ibrahimiphone"
-		}
 	}]
 }
