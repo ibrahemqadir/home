@@ -7,197 +7,96 @@
     <meta name="description" content="KurdGPT is a new model of AI for some language and support Kurdish created by Ibrahim Qadir Mustafa">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="icon.png" type="image/x-icon">
-   <style>
-   @font-face {
-    font-family: 'K24KurdishBold-Bold';
-    src: url('K24KurdishBold-Bold.woff') format('woff2');
-}
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'K24KurdishBold-Bold', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-	overflow: hidden;
-}
+    <style>
+        @font-face {
+            font-family: 'K24KurdishBold-Bold';
+            src: url('K24KurdishBold-Bold.woff') format('woff2');
+        }
 
-header {
-    background-color: var(--header-bg-color);
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            font-family: 'K24KurdishBold-Bold', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
 
-h3, a {
-    margin: 0;
-    text-decoration: none;
-    font-size: 17px;
-    line-height: 1.6em;
-    color: var(--text-color);
-}
+        header {
+            display: none; /* Hide the header */
+        }
 
-.scrollable-section {
-    padding-top: 70px;
-    overflow: auto;
-}
+        .scrollable-section iframe {
+            width: 100%;
+            height: 100vh;
+            overflow: auto;
+            border: none;
+        }
 
-iframe {
-    width: 100%;
-    height: 100vh;
-    border: none;
-}
+        footer {
+            background-color: var(--footer-bg-color);
+            position: fixed;
+            width: 100%;
+            height: 20px;
+            bottom: 0;
+            left: 0;
+            z-index: 999;
+        }
 
-footer {
-    background-color: var(--footer-bg-color);
-    position: fixed;
-    width: 100%;
-    height: 72px;
-    bottom: 0;
-    left: 0;
-}
+        h3, a {
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 17px;
+            line-height: 1.6em;
+        }
 
-.toggle-container {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-}
+        a {
+            color: blue;
+        }
 
-.toggle-label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: #ccc;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .scrollable-section iframe {
+                height: calc(100vh - 90px);
+            }
+        }
 
-.toggle-label:before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: white;
-    transition: transform 0.3s ease;
-}
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1f1f1f;
+                --text-color: #ffffff;
+                --footer-bg-color: #000000;
+            }
+        }
 
-.toggle-label:after {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #999;
-    transform: translateX(20px);
-    transition: transform 0.3s ease;
-}
-
-#toggle-mode:checked + .toggle-label {
-    background-color: #007bff;
-}
-
-#toggle-mode:checked + .toggle-label:before {
-    transform: translateX(20px);
-}
-
-#toggle-mode:checked + .toggle-label:after {
-    transform: translateX(0);
-}
-
-@media (max-width: 768px) {
-    header {
-        height: 100px;
-        padding: 0 10px;
-    }
-
-    h3 {
-        font-size: 14px;
-    }
-}
-:root {
-    --bg-color: #1f1f1f;
-    --text-color: #ffffff;
-    --header-bg-color: #111111;
-    --footer-bg-color: #111111;
-}
-
-.scrollable-section iframe {
-    height: calc(100vh - 90px);
-}
-:root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --header-bg-color: #ffffff;
-    --footer-bg-color: #ffffff;
-}
-
-.scrollable-section iframe {
-    height: calc(100vh - 90px);
-}
-
-   
-   </style>
+        /* Light Mode */
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #ffffff;
+                --text-color: #000000;
+                --footer-bg-color: #ffffff;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<center>
-    <header>
-        
-    </header>
+<div class="scrollable-section">
+    <iframe loading="lazy" src="https://linguagpt.com/en/chat/" scrolling="No"></iframe>
+</div>
 
-    <div class="scrollable-section">
-        <iframe loading="lazy" src="https://linguagpt.com/en/chat/" scrolling="no" style="border: none;"></iframe>
-    </div>
+<footer></footer>
 
-    <footer></footer>
-</center>
-    <script>
-	const toggleMode = document.getElementById('toggle-mode');
-
-function setTheme(theme) {
-    if (theme === 'dark') {
+<script>
+    // Detect system preference for dark or light mode
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.setAttribute('data-theme', 'dark');
-        toggleMode.checked = true;
     } else {
-        document.documentElement.removeAttribute('data-theme');
-        toggleMode.checked = false;
+        document.documentElement.setAttribute('data-theme', 'light');
     }
-}
-
-function prefersDarkScheme(event) {
-    const prefersDark = event.matches;
-    setTheme(prefersDark ? 'dark' : 'light');
-}
-
-toggleMode.addEventListener('change', () => {
-    if (toggleMode.checked) {
-        setTheme('dark');
-    } else {
-        setTheme('light');
-    }
-});
-
-const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-prefersDarkScheme(darkModeMediaQuery);
-darkModeMediaQuery.addListener(prefersDarkScheme);
-
-	
-	</script>
+</script>
 </body>
 
 </html>
