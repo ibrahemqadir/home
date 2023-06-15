@@ -12,51 +12,61 @@
     <style>
 	@font-face {
   font-family: 'K24KurdishBold-Bold';
-  src: url('K24KurdishBold-Bold.woff' ) format('woff2');
+  src: url('K24KurdishBold-Bold.woff') format('woff2');
 }
 
- 
-        body {
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .scrollable-section iframe {
-            width: 300px; /* Adjust the width as needed */
-            height: 780px; /* Adjust the height as needed */
-            overflow: auto;
-        }
-        
-        header {
-            background-color: #ffffff; /* Example background color */
-            position: fixed;
-            width: 100%;
-            height: 70px; /* Adjust the height as needed */
-            top: 0;
-            left: 0;
-            z-index: 999;
-        } 
-	    footer {
-            background-color: #ffffff; /* Example background color */
-            position: fixed;
-            width: 100%;
-            height: 20px; /* Adjust the height as needed */
-            bottom: 0;
-            left: 0;
-            z-index: 999;
-        }
-		h3 , a{
-		font-family: 'K24KurdishBold-Bold';
-		margin-top: 20px;
-		text-decoration: none;
-		font-size: 17px;
-		line-height: 1.6em;
-		
-		}
-		a{
-		color: blue;
-		}
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.scrollable-section iframe {
+  width: 100%; /* Use full width on mobile */
+  height: 700px; /* Adjust the height as needed */
+  overflow: auto;
+}
+
+footer {
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  height: 20px;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+h3,
+a {
+  font-family: 'K24KurdishBold-Bold';
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 1.6em;
+}
+
+a {
+  color: blue;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .scrollable-section iframe {
+    height: 790px;
+  }
+}
+
     </style>
 </head>
 
