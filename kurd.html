@@ -79,12 +79,19 @@
                 --footer-bg-color: #ffffff;
             }
         }
+
+        /* Hide the header within the iframe */
+        .scrollable-section iframe#linguagpt-iframe {
+            /* Adjust the top position to hide the header */
+            position: relative;
+            top: -70px;
+        }
     </style>
 </head>
 
 <body>
 <div class="scrollable-section">
-    <iframe loading="lazy" src="https://linguagpt.com/en/chat/" scrolling="No"></iframe>
+    <iframe loading="lazy" src="https://linguagpt.com/en/chat/" id="linguagpt-iframe" scrolling="No"></iframe>
 </div>
 
 <footer></footer>
