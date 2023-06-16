@@ -27,6 +27,15 @@
         }
     });
 </script>
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                alert("You cannot view the source code.");
+            }
+        });
+    </script>
+
     <style>
         @font-face {
             font-family: 'K24KurdishBold-Bold';
