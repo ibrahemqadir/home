@@ -7,7 +7,26 @@
     <meta name="description" content="KurdGPT is a new model of AI for some language and support kurdish created by ibrahim qadir mustafa">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="image" href="icon.png" type="image/x-icon">
+ <script>
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
 
+    // Disable key combinations
+    document.addEventListener('keydown', function (e) {
+        // Check for Ctrl+Shift+I, Ctrl+U, and F12
+        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+            e.preventDefault();
+        }
+        if (e.ctrlKey && e.key === 'U') {
+            e.preventDefault();
+        }
+        if (e.key === 'F12') {
+            e.preventDefault();
+        }
+    });
+</script>
     <style>
         @font-face {
             font-family: 'K24KurdishBold-Bold';
