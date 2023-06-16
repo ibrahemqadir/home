@@ -1,133 +1,130 @@
-const htmlCode = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>KurdGPT</title>
     <meta charset="utf-8">
-    <meta name="author" content="Ibrahim Qadir Mustafa">
-    <meta name="description" content="KurdGPT is a new model of AI for some language and support kurdish created by ibrahim qadir mustafa">
+	<meta name="author" content="Ibrahim Qadir Mustafa">
+	<meta name="description" content="KurdGPT is a new model of AI for some language and support kurdish created by ibrahim qadir mustafa">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="image" href="icon.png" type="image/x-icon">
+	<link rel="image" href="icon.png" type="image/x-icon">
 
 
-    <style>
-        @font-face {
-            font-family: 'K24KurdishBold-Bold';
-            src: url('K24KurdishBold-Bold.woff') format('woff2');
+<style>
+    @font-face {
+        font-family: 'K24KurdishBold-Bold';
+        src: url('K24KurdishBold-Bold.woff') format('woff2');
+    }
+    
+    body {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        font-family: 'K24KurdishBold-Bold', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+    
+    .scrollable-section iframe {
+        width: 420px; /* Adjust the width as needed */
+        height: 600px; /* Adjust the height as needed */
+        overflow: auto;
+        border: none;
+    }
+    
+    header {
+        background-color: #ffffff; /* Example background color */
+        position: fixed;
+        width: 100%;
+        height: 70px; /* Adjust the height as needed */
+        top: 0;
+        left: 0;
+        z-index: 999;
+    } 
+    
+    footer {
+        background-color: #ffffff; /* Example background color */
+        position: fixed;
+        width: 100%;
+        height: 70px; /* Adjust the height as needed */
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+    }
+    
+    h4, a {
+        font-family: 'K24KurdishBold-Bold';
+        margin-top: 20px;
+        text-decoration: none;
+        font-size: 17px;
+        line-height: 1.6em;
+    }
+    
+    a {
+        color: blue;
+    }
+
+    /* Light Mode */
+    @media (prefers-color-scheme: light) {
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --footer-bg-color: #ffffff;
         }
-        
-        body {
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            font-family: 'K24KurdishBold-Bold', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+    }
+
+    /* Dark Mode */
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg-color: #1f1f1f;
+            --text-color: #ffffff;
+            --footer-bg-color: #000000;
         }
-        
+    }
+
+    /* System Preference */
+    @media (prefers-color-scheme: light) {
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --footer-bg-color: #ffffff;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg-color: #1f1f1f;
+            --text-color: #ffffff;
+            --footer-bg-color: #000000;
+        }
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 768px) {
         .scrollable-section iframe {
-            width: 420px; /* Adjust the width as needed */
-            height: 600px; /* Adjust the height as needed */
-            overflow: auto;
-            border: none;
+            height: calc(50vh - 30px);
         }
-        
-        header {
-            background-color: #ffffff; /* Example background color */
-            position: fixed;
-            width: 100%;
-            height: 70px; /* Adjust the height as needed */
-            top: 0;
-            left: 0;
-            z-index: 999;
-        } 
-        
-        footer {
-            background-color: #ffffff; /* Example background color */
-            position: fixed;
-            width: 100%;
-            height: 70px; /* Adjust the height as needed */
-            bottom: 0;
-            left: 0;
-            z-index: 999;
-        }
-        
-        h4, a {
-            font-family: 'K24KurdishBold-Bold';
-            margin-top: 20px;
-            text-decoration: none;
-            font-size: 17px;
-            line-height: 1.6em;
-        }
-        
-        a {
-            color: blue;
-        }
+    }
 
-        /* Light Mode */
-        @media (prefers-color-scheme: light) {
-            :root {
-                --bg-color: #ffffff;
-                --text-color: #000000;
-                --footer-bg-color: #ffffff;
-            }
-        }
-
-        /* Dark Mode */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-color: #1f1f1f;
-                --text-color: #ffffff;
-                --footer-bg-color: #000000;
-            }
-        }
-
-        /* System Preference */
-        @media (prefers-color-scheme: light) {
-            :root {
-                --bg-color: #ffffff;
-                --text-color: #000000;
-                --footer-bg-color: #ffffff;
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-color: #1f1f1f;
-                --text-color: #ffffff;
-                --footer-bg-color: #000000;
-            }
-        }
-
-        /* Media Queries */
-        @media screen and (max-width: 768px) {
-            .scrollable-section iframe {
-                height: calc(50vh - 30px);
-            }
-        }
-
-        .scrollable-section iframe#linguagpt-iframe {
-            top: 0;
-            left: 0;
-            width: 400px;
-            height: 770px;
-            z-index: 1;
-        }
-    </style>
+    .scrollable-section iframe#linguagpt-iframe {
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 770px;
+        z-index: 1;
+    }
+</style>
 
 </head>
 
 <body>
 <center>
     <header><h4>KurdGPT : created by Ibrahim Qadir Mustafa Balaky  <br><a href="https://www.facebook.com/ibrahimmm55">Facebook</a></h3></header>
-    
+	
     <div class="scrollable-section">
     <iframe loading="lazy" src="https://linguagpt.com/en/chat/?hideFooter=true" id="linguagpt-iframe" scrolling="No"></iframe>
 </div>
-    <footer><footer>
-    </center>
+	<footer><footer>
+	</center>
 </body>
 
-</html>`;
-
-const encodedCode = btoa(htmlCode);
-console.log(encodedCode);
+</html>
